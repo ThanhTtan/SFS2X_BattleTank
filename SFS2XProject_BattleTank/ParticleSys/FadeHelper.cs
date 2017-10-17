@@ -1,0 +1,15 @@
+﻿namespace SFS2XProject_BattleTank.ParticleSys
+{
+    public class FadeHelper
+    {
+        public FadeHelper() { }
+
+        public int UpdateFade(int fade, float lifeTime, float totalElapsedTime)
+        {
+            int result = 255;
+            float degreeOfCompletion = totalElapsedTime / lifeTime;
+            result -= (int)(result * degreeOfCompletion);
+            return result;
+        }
+    }
+}
